@@ -1,0 +1,32 @@
+{
+    "env": {
+        "node": true,
+        "es2022": true
+    },
+    "globals": {
+        "process": "readonly"
+    },
+    "rules": {
+        "no-unused-vars": "error",
+        "no-undef": "error",
+        "no-console": "warn",
+        "no-debugger": "error",
+        "eqeqeq": ["error", "always"],
+        "curly": ["error", "all"],
+        "no-var": "error",
+        "prefer-const": "error",
+        "no-duplicate-imports": "error",
+        "no-throw-literal": "error",
+        "no-empty": ["error", { "allowEmptyCatch": false }],
+        "no-fallthrough": "error",
+        "default-case": "error",
+        "no-useless-catch": "error",
+        "no-restricted-imports": [
+            "error",
+            {
+                "patterns": ["../*"]
+            }
+        ],
+        "consistent-return": "error"
+    }
+}

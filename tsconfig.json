@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "types": ["bun", "node"],
+        "skipLibCheck": true,
+        "strict": true,
+
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": ["src/**/*"]
+}
