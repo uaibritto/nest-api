@@ -1,12 +1,7 @@
 import { Injectable } from "@nestjs/common"
 
 import { CreateTodoDto } from "./dto/create-todo.dto"
-
-export interface Todo {
-    id: number
-    title: string
-    completed: boolean
-}
+import { Todo } from "./todo.types"
 
 @Injectable()
 export class TodosService {
@@ -17,9 +12,13 @@ export class TodosService {
         return this.todos
     }
 
-    create(dto: CreateTodoDto): Todo {
-        const todo: Todo = { id: this.nextId++, ...dto, completed: false }
+    create(dto: CreateTodoDto): void {
+        const todo: Todo = {
+            id: this.nextId++,
+            title: dto.title,
+            done: dto.done ?? false
+        }
+
         this.todos.push(todo)
-        return todo
     }
 }

@@ -14,5 +14,5 @@ export class CreateTodoDto {
 
     @IsBoolean()
     @IsOptional()
-    completed?: boolean
+    done: boolean = false
 }
